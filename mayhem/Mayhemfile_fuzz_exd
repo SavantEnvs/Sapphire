@@ -1,0 +1,10 @@
+project: savantenvs/Sapphire
+target: fuzz_exd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_exd/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_exd
+    libfuzzer: true
+    timeout: 5

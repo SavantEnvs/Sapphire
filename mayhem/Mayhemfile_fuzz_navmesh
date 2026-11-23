@@ -1,0 +1,10 @@
+project: savantenvs/Sapphire
+target: fuzz_navmesh
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_navmesh/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_navmesh
+    libfuzzer: true
+    timeout: 5
